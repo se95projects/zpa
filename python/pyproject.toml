@@ -1,0 +1,24 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "zpa"
+version = "0.0.1"
+description = "Python port of the Z PL/SQL Analyzer (lexer-first)"
+requires-python = ">=3.11"
+dependencies = [
+    "regex>=2024.0.0",  # \p{L} unicode property support in identifier patterns
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=8.0",
+]
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/zpa"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]

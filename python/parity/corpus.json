@@ -1,0 +1,12 @@
+{
+  "_comment": "Shared lexer parity corpus. Single source of truth for BOTH the Python parity test (tests/test_parity.py) and the Kotlin TokenOracleTest. name -> PL/SQL snippet. Keep entries small and focused; grow as coverage expands.",
+  "cases": {
+    "select_star": "select * from emp;",
+    "select_into": "select id into v_id from emp where id = 1;",
+    "string_escaped_quote": "select 'it''s here' from dual;",
+    "numbers": "select 1, 2.5, 3e4, .7 from dual;",
+    "compare_null": "begin if x = null then null; end if; end;",
+    "assignment_and_ops": "begin x := a ** 2 + b / c; end;",
+    "labels_and_range": "begin <<lbl>> for i in 1..10 loop null; end loop; end;"
+  }
+}
