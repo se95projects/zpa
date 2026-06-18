@@ -62,3 +62,6 @@ gradle-app.setting
 .gradletasknamecache
 .kotlin/
 zpa-checks/tools/
+
+# python
+__pycache__/
